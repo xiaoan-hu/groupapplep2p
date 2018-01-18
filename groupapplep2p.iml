@@ -20,6 +20,7 @@
         <fileset id="fileset" name="ShiroConfig" removed="false">
           <file>file://$MODULE_DIR$/src/main/java/com/bdqn/t0724/ShiroConfig.java</file>
           <file>file://$MODULE_DIR$/src/main/java/com/bdqn/t0724/SpringConfig.java</file>
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/p2p-servlet.xml</file>
         </fileset>
       </configuration>
     </facet>
