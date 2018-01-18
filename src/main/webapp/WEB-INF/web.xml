@@ -4,5 +4,56 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <!--集成spring-->
+    <context-param>
+        <!--第一个参数指定启动spring需要用到注解的模式启动-->
+        <param-name>contextClass</param-name>
+        <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+    </context-param>
+    <context-param>
+        <!--第二个参数指定注解配置文件,可以指定多个用空格分隔-->
+        <param-name>contextConfigLocation</param-name>
+        <param-value>com.bdqn.t0724.SpringConfig</param-value>
+    </context-param>
+    <listener>
+        <!--上述两个参数都会被ContextLoaderListener使用-->
+        <!--这个监听器会自动创建一个Spring的实例，并放在指定位置：-->
+        <!--WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE-->
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!--保正整个项目前端默认使用utf-8接受数据和发送数据-->
+    <filter>
+        <filter-name>characterEncodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>characterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!--初始化spring mvc的配置（在由xml的情况下）-->
+    <!--目前使用的是默认的方式指定配置文件，规则为【servlet name】-servlet.xml-->
+    <!--另外这个文件必须在wen-inf目录下-->
+    <servlet>
+        <servlet-name>mvc</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <!--下面这个参数指定了servlet启动的优先级。数字越接近0，优先级越高。-->
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mvc</servlet-name>
+        <!--这个斜杠表示所有的请求都会到这里，除非另有servlet的url-pattern更加匹配-->
+        <!--所以一个/h请求会由mvc处理，因为没有其它人可以匹配。-->
+        <!--一个/hello，则会由lingling处理，因为其匹配得更好-->
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
 
 </web-app>
