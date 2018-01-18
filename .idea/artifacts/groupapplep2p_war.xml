@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="groupapplep2p:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="group-apple-p2p-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="groupapplep2p:war exploded" />
-    </root>
-  </artifact>
-</component>
