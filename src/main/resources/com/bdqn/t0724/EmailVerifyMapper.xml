@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdqn.t0724.mapper.EmailVerifyMapper">
+  <resultMap id="BaseResultMap" type="com.bdqn.t0724.model.EmailVerify">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="userinfo_id" jdbcType="BIGINT" property="userinfoId" />
+    <result column="sendTime" jdbcType="TIMESTAMP" property="sendtime" />
+    <result column="uuid" jdbcType="VARCHAR" property="uuid" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from emailverify
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.bdqn.t0724.model.EmailVerify">
+    insert into emailverify (id, email, userinfo_id, 
+      sendTime, uuid)
+    values (#{id,jdbcType=BIGINT}, #{email,jdbcType=VARCHAR}, #{userinfoId,jdbcType=BIGINT}, 
+      #{sendtime,jdbcType=TIMESTAMP}, #{uuid,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.bdqn.t0724.model.EmailVerify">
+    update emailverify
+    set email = #{email,jdbcType=VARCHAR},
+      userinfo_id = #{userinfoId,jdbcType=BIGINT},
+      sendTime = #{sendtime,jdbcType=TIMESTAMP},
+      uuid = #{uuid,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, email, userinfo_id, sendTime, uuid
+    from emailverify
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, email, userinfo_id, sendTime, uuid
+    from emailverify
+  </select>
+</mapper>

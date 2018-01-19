@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdqn.t0724.mapper.PlatFormBankInfoMapper">
+  <resultMap id="BaseResultMap" type="com.bdqn.t0724.model.PlatFormBankInfo">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="bankName" jdbcType="VARCHAR" property="bankname" />
+    <result column="accountName" jdbcType="VARCHAR" property="accountname" />
+    <result column="accountNumber" jdbcType="VARCHAR" property="accountnumber" />
+    <result column="forkName" jdbcType="VARCHAR" property="forkname" />
+    <result column="iconCls" jdbcType="VARCHAR" property="iconcls" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from platformbankinfo
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.bdqn.t0724.model.PlatFormBankInfo">
+    insert into platformbankinfo (id, bankName, accountName, 
+      accountNumber, forkName, iconCls
+      )
+    values (#{id,jdbcType=BIGINT}, #{bankname,jdbcType=VARCHAR}, #{accountname,jdbcType=VARCHAR}, 
+      #{accountnumber,jdbcType=VARCHAR}, #{forkname,jdbcType=VARCHAR}, #{iconcls,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.bdqn.t0724.model.PlatFormBankInfo">
+    update platformbankinfo
+    set bankName = #{bankname,jdbcType=VARCHAR},
+      accountName = #{accountname,jdbcType=VARCHAR},
+      accountNumber = #{accountnumber,jdbcType=VARCHAR},
+      forkName = #{forkname,jdbcType=VARCHAR},
+      iconCls = #{iconcls,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, bankName, accountName, accountNumber, forkName, iconCls
+    from platformbankinfo
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, bankName, accountName, accountNumber, forkName, iconCls
+    from platformbankinfo
+  </select>
+</mapper>

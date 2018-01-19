@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdqn.t0724.mapper.VideoAuthMapper">
+  <resultMap id="BaseResultMap" type="com.bdqn.t0724.model.VideoAuth">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="state" jdbcType="TINYINT" property="state" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="auditTime" jdbcType="TIMESTAMP" property="audittime" />
+    <result column="applyTime" jdbcType="TIMESTAMP" property="applytime" />
+    <result column="auditor_id" jdbcType="BIGINT" property="auditorId" />
+    <result column="applier_id" jdbcType="BIGINT" property="applierId" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from videoauth
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.bdqn.t0724.model.VideoAuth">
+    insert into videoauth (id, state, remark, 
+      auditTime, applyTime, auditor_id, 
+      applier_id)
+    values (#{id,jdbcType=BIGINT}, #{state,jdbcType=TINYINT}, #{remark,jdbcType=VARCHAR}, 
+      #{audittime,jdbcType=TIMESTAMP}, #{applytime,jdbcType=TIMESTAMP}, #{auditorId,jdbcType=BIGINT}, 
+      #{applierId,jdbcType=BIGINT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.bdqn.t0724.model.VideoAuth">
+    update videoauth
+    set state = #{state,jdbcType=TINYINT},
+      remark = #{remark,jdbcType=VARCHAR},
+      auditTime = #{audittime,jdbcType=TIMESTAMP},
+      applyTime = #{applytime,jdbcType=TIMESTAMP},
+      auditor_id = #{auditorId,jdbcType=BIGINT},
+      applier_id = #{applierId,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, state, remark, auditTime, applyTime, auditor_id, applier_id
+    from videoauth
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, state, remark, auditTime, applyTime, auditor_id, applier_id
+    from videoauth
+  </select>
+</mapper>

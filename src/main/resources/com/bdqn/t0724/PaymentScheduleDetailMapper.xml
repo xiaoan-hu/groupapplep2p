@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdqn.t0724.mapper.PaymentScheduleDetailMapper">
+  <resultMap id="BaseResultMap" type="com.bdqn.t0724.model.PaymentScheduleDetail">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="bidAmount" jdbcType="DECIMAL" property="bidamount" />
+    <result column="bid_id" jdbcType="BIGINT" property="bidId" />
+    <result column="totalAmount" jdbcType="DECIMAL" property="totalamount" />
+    <result column="principal" jdbcType="DECIMAL" property="principal" />
+    <result column="interest" jdbcType="DECIMAL" property="interest" />
+    <result column="monthIndex" jdbcType="INTEGER" property="monthindex" />
+    <result column="deadLine" jdbcType="TIMESTAMP" property="deadline" />
+    <result column="bidrequest_id" jdbcType="BIGINT" property="bidrequestId" />
+    <result column="payDate" jdbcType="TIMESTAMP" property="paydate" />
+    <result column="returnType" jdbcType="INTEGER" property="returntype" />
+    <result column="paymentSchedule_id" jdbcType="BIGINT" property="paymentscheduleId" />
+    <result column="fromLogininfo_id" jdbcType="BIGINT" property="fromlogininfoId" />
+    <result column="toLogininfo_id" jdbcType="BIGINT" property="tologininfoId" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from paymentscheduledetail
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.bdqn.t0724.model.PaymentScheduleDetail">
+    insert into paymentscheduledetail (id, bidAmount, bid_id, 
+      totalAmount, principal, interest, 
+      monthIndex, deadLine, bidrequest_id, 
+      payDate, returnType, paymentSchedule_id, 
+      fromLogininfo_id, toLogininfo_id)
+    values (#{id,jdbcType=BIGINT}, #{bidamount,jdbcType=DECIMAL}, #{bidId,jdbcType=BIGINT}, 
+      #{totalamount,jdbcType=DECIMAL}, #{principal,jdbcType=DECIMAL}, #{interest,jdbcType=DECIMAL}, 
+      #{monthindex,jdbcType=INTEGER}, #{deadline,jdbcType=TIMESTAMP}, #{bidrequestId,jdbcType=BIGINT}, 
+      #{paydate,jdbcType=TIMESTAMP}, #{returntype,jdbcType=INTEGER}, #{paymentscheduleId,jdbcType=BIGINT}, 
+      #{fromlogininfoId,jdbcType=BIGINT}, #{tologininfoId,jdbcType=BIGINT})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.bdqn.t0724.model.PaymentScheduleDetail">
+    update paymentscheduledetail
+    set bidAmount = #{bidamount,jdbcType=DECIMAL},
+      bid_id = #{bidId,jdbcType=BIGINT},
+      totalAmount = #{totalamount,jdbcType=DECIMAL},
+      principal = #{principal,jdbcType=DECIMAL},
+      interest = #{interest,jdbcType=DECIMAL},
+      monthIndex = #{monthindex,jdbcType=INTEGER},
+      deadLine = #{deadline,jdbcType=TIMESTAMP},
+      bidrequest_id = #{bidrequestId,jdbcType=BIGINT},
+      payDate = #{paydate,jdbcType=TIMESTAMP},
+      returnType = #{returntype,jdbcType=INTEGER},
+      paymentSchedule_id = #{paymentscheduleId,jdbcType=BIGINT},
+      fromLogininfo_id = #{fromlogininfoId,jdbcType=BIGINT},
+      toLogininfo_id = #{tologininfoId,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, bidAmount, bid_id, totalAmount, principal, interest, monthIndex, deadLine, 
+    bidrequest_id, payDate, returnType, paymentSchedule_id, fromLogininfo_id, toLogininfo_id
+    from paymentscheduledetail
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, bidAmount, bid_id, totalAmount, principal, interest, monthIndex, deadLine, 
+    bidrequest_id, payDate, returnType, paymentSchedule_id, fromLogininfo_id, toLogininfo_id
+    from paymentscheduledetail
+  </select>
+</mapper>

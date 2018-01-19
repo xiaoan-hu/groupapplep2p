@@ -83,7 +83,30 @@
 				value=""/> -->
 		</javaClientGenerator>
 
+		<table tableName="account" domainObjectName="Account" />
+		<table tableName="accountflow" domainObjectName="AccountFlow" />
+		<table tableName="bid" domainObjectName="Bid" />
+		<table tableName="bidrequest" domainObjectName="BidRequest" />
+		<table tableName="bidrequestaudithistory" domainObjectName="BidRequestAuditHistory" />
+		<table tableName="comoanybankinfo" domainObjectName="CompanyBankInfo" />
+		<table tableName="emailverify" domainObjectName="EmailVerify" />
+		<table tableName="iplog" domainObjectName="IpLog" />
+		<table tableName="logininfo" domainObjectName="LoginInfo" />
+		<table tableName="mailverify" domainObjectName="MailVerify" />
+		<table tableName="moneywithdraw" domainObjectName="MoneyWithDraw" />
+		<table tableName="paymentschedule" domainObjectName="PaymentSchedule" />
+		<table tableName="paymentscheduledetail" domainObjectName="PaymentScheduleDetail" />
+		<table tableName="platformbankinfo" domainObjectName="PlatFormBankInfo" />
+		<table tableName="realauth" domainObjectName="RealAuth" />
+		<table tableName="rechargeoffline" domainObjectName="RechargeOffline" />
+		<table tableName="systemaccount" domainObjectName="SystemAccount" />
+		<table tableName="systemaccountflow" domainObjectName="SystemAccountFlow" />
+		<table tableName="systemdictionary" domainObjectName="SystemDictionary" />
+		<table tableName="systemdictionaryitem" domainObjectName="SystemDictionaryItem" />
 		<table tableName="userbankinfo" domainObjectName="UserBankInfo" />
+		<table tableName="userfile" domainObjectName="UserFile" />
+		<table tableName="userinfo" domainObjectName="UserInfo" />
+		<table tableName="videoauth" domainObjectName="VideoAuth" />
 
 
 

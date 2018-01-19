@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdqn.t0724.mapper.MoneyWithDrawMapper">
+  <resultMap id="BaseResultMap" type="com.bdqn.t0724.model.MoneyWithDraw">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="state" jdbcType="TINYINT" property="state" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="auditTime" jdbcType="TIMESTAMP" property="audittime" />
+    <result column="applyTime" jdbcType="TIMESTAMP" property="applytime" />
+    <result column="auditor_id" jdbcType="BIGINT" property="auditorId" />
+    <result column="applier_id" jdbcType="BIGINT" property="applierId" />
+    <result column="amount" jdbcType="DECIMAL" property="amount" />
+    <result column="fee" jdbcType="DECIMAL" property="fee" />
+    <result column="bankName" jdbcType="VARCHAR" property="bankname" />
+    <result column="accountName" jdbcType="VARCHAR" property="accountname" />
+    <result column="accountNumber" jdbcType="VARCHAR" property="accountnumber" />
+    <result column="forkName" jdbcType="VARCHAR" property="forkname" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from moneywithdraw
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.bdqn.t0724.model.MoneyWithDraw">
+    insert into moneywithdraw (id, state, remark, 
+      auditTime, applyTime, auditor_id, 
+      applier_id, amount, fee, 
+      bankName, accountName, accountNumber, 
+      forkName)
+    values (#{id,jdbcType=BIGINT}, #{state,jdbcType=TINYINT}, #{remark,jdbcType=VARCHAR}, 
+      #{audittime,jdbcType=TIMESTAMP}, #{applytime,jdbcType=TIMESTAMP}, #{auditorId,jdbcType=BIGINT}, 
+      #{applierId,jdbcType=BIGINT}, #{amount,jdbcType=DECIMAL}, #{fee,jdbcType=DECIMAL}, 
+      #{bankname,jdbcType=VARCHAR}, #{accountname,jdbcType=VARCHAR}, #{accountnumber,jdbcType=VARCHAR}, 
+      #{forkname,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.bdqn.t0724.model.MoneyWithDraw">
+    update moneywithdraw
+    set state = #{state,jdbcType=TINYINT},
+      remark = #{remark,jdbcType=VARCHAR},
+      auditTime = #{audittime,jdbcType=TIMESTAMP},
+      applyTime = #{applytime,jdbcType=TIMESTAMP},
+      auditor_id = #{auditorId,jdbcType=BIGINT},
+      applier_id = #{applierId,jdbcType=BIGINT},
+      amount = #{amount,jdbcType=DECIMAL},
+      fee = #{fee,jdbcType=DECIMAL},
+      bankName = #{bankname,jdbcType=VARCHAR},
+      accountName = #{accountname,jdbcType=VARCHAR},
+      accountNumber = #{accountnumber,jdbcType=VARCHAR},
+      forkName = #{forkname,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, state, remark, auditTime, applyTime, auditor_id, applier_id, amount, fee, 
+    bankName, accountName, accountNumber, forkName
+    from moneywithdraw
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, state, remark, auditTime, applyTime, auditor_id, applier_id, amount, fee, 
+    bankName, accountName, accountNumber, forkName
+    from moneywithdraw
+  </select>
+</mapper>

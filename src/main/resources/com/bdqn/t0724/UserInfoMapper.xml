@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdqn.t0724.mapper.UserInfoMapper">
+  <resultMap id="BaseResultMap" type="com.bdqn.t0724.model.UserInfo">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="version" jdbcType="INTEGER" property="version" />
+    <result column="bitState" jdbcType="BIGINT" property="bitstate" />
+    <result column="realName" jdbcType="VARCHAR" property="realname" />
+    <result column="score" jdbcType="INTEGER" property="score" />
+    <result column="realAuthId" jdbcType="BIGINT" property="realauthid" />
+    <result column="idNumber" jdbcType="VARCHAR" property="idnumber" />
+    <result column="phoneNumber" jdbcType="VARCHAR" property="phonenumber" />
+    <result column="incomeGrade_id" jdbcType="BIGINT" property="incomegradeId" />
+    <result column="marriage_id" jdbcType="BIGINT" property="marriageId" />
+    <result column="kidCount_id" jdbcType="BIGINT" property="kidcountId" />
+    <result column="educationBackground_id" jdbcType="BIGINT" property="educationbackgroundId" />
+    <result column="houseCondition_id" jdbcType="BIGINT" property="houseconditionId" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from userinfo
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.bdqn.t0724.model.UserInfo">
+    insert into userinfo (id, version, bitState, 
+      realName, score, realAuthId, 
+      idNumber, phoneNumber, incomeGrade_id, 
+      marriage_id, kidCount_id, educationBackground_id, 
+      houseCondition_id, email)
+    values (#{id,jdbcType=BIGINT}, #{version,jdbcType=INTEGER}, #{bitstate,jdbcType=BIGINT}, 
+      #{realname,jdbcType=VARCHAR}, #{score,jdbcType=INTEGER}, #{realauthid,jdbcType=BIGINT}, 
+      #{idnumber,jdbcType=VARCHAR}, #{phonenumber,jdbcType=VARCHAR}, #{incomegradeId,jdbcType=BIGINT}, 
+      #{marriageId,jdbcType=BIGINT}, #{kidcountId,jdbcType=BIGINT}, #{educationbackgroundId,jdbcType=BIGINT}, 
+      #{houseconditionId,jdbcType=BIGINT}, #{email,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.bdqn.t0724.model.UserInfo">
+    update userinfo
+    set version = #{version,jdbcType=INTEGER},
+      bitState = #{bitstate,jdbcType=BIGINT},
+      realName = #{realname,jdbcType=VARCHAR},
+      score = #{score,jdbcType=INTEGER},
+      realAuthId = #{realauthid,jdbcType=BIGINT},
+      idNumber = #{idnumber,jdbcType=VARCHAR},
+      phoneNumber = #{phonenumber,jdbcType=VARCHAR},
+      incomeGrade_id = #{incomegradeId,jdbcType=BIGINT},
+      marriage_id = #{marriageId,jdbcType=BIGINT},
+      kidCount_id = #{kidcountId,jdbcType=BIGINT},
+      educationBackground_id = #{educationbackgroundId,jdbcType=BIGINT},
+      houseCondition_id = #{houseconditionId,jdbcType=BIGINT},
+      email = #{email,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, version, bitState, realName, score, realAuthId, idNumber, phoneNumber, 
+    incomeGrade_id, marriage_id, kidCount_id, educationBackground_id, houseCondition_id, 
+    email
+    from userinfo
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, version, bitState, realName, score, realAuthId, idNumber, phoneNumber, 
+    incomeGrade_id, marriage_id, kidCount_id, educationBackground_id, houseCondition_id, 
+    email
+    from userinfo
+  </select>
+</mapper>

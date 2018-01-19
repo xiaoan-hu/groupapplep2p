@@ -39,4 +39,42 @@
     select id, bankName, accountName, accountNumber, forkName, logininfo_id
     from userbankinfo
   </select>
+  <resultMap id="BaseResultMap" type="com.bdqn.t0724.model.UserBankInfo">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="bankName" jdbcType="VARCHAR" property="bankname" />
+    <result column="accountName" jdbcType="VARCHAR" property="accountname" />
+    <result column="accountNumber" jdbcType="VARCHAR" property="accountnumber" />
+    <result column="forkName" jdbcType="VARCHAR" property="forkname" />
+    <result column="logininfo_id" jdbcType="BIGINT" property="logininfoId" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from userbankinfo
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.bdqn.t0724.model.UserBankInfo">
+    insert into userbankinfo (id, bankName, accountName, 
+      accountNumber, forkName, logininfo_id
+      )
+    values (#{id,jdbcType=BIGINT}, #{bankname,jdbcType=VARCHAR}, #{accountname,jdbcType=VARCHAR}, 
+      #{accountnumber,jdbcType=VARCHAR}, #{forkname,jdbcType=VARCHAR}, #{logininfoId,jdbcType=BIGINT}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.bdqn.t0724.model.UserBankInfo">
+    update userbankinfo
+    set bankName = #{bankname,jdbcType=VARCHAR},
+      accountName = #{accountname,jdbcType=VARCHAR},
+      accountNumber = #{accountnumber,jdbcType=VARCHAR},
+      forkName = #{forkname,jdbcType=VARCHAR},
+      logininfo_id = #{logininfoId,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, bankName, accountName, accountNumber, forkName, logininfo_id
+    from userbankinfo
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, bankName, accountName, accountNumber, forkName, logininfo_id
+    from userbankinfo
+  </select>
 </mapper>

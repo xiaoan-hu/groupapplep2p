@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdqn.t0724.mapper.IpLogMapper">
+  <resultMap id="BaseResultMap" type="com.bdqn.t0724.model.IpLog">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="ip" jdbcType="VARCHAR" property="ip" />
+    <result column="state" jdbcType="TINYINT" property="state" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="logininfoid" jdbcType="BIGINT" property="logininfoid" />
+    <result column="userType" jdbcType="TINYINT" property="usertype" />
+    <result column="logintime" jdbcType="TIMESTAMP" property="logintime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from iplog
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.bdqn.t0724.model.IpLog">
+    insert into iplog (id, ip, state, 
+      username, logininfoid, userType, 
+      logintime)
+    values (#{id,jdbcType=BIGINT}, #{ip,jdbcType=VARCHAR}, #{state,jdbcType=TINYINT}, 
+      #{username,jdbcType=VARCHAR}, #{logininfoid,jdbcType=BIGINT}, #{usertype,jdbcType=TINYINT}, 
+      #{logintime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.bdqn.t0724.model.IpLog">
+    update iplog
+    set ip = #{ip,jdbcType=VARCHAR},
+      state = #{state,jdbcType=TINYINT},
+      username = #{username,jdbcType=VARCHAR},
+      logininfoid = #{logininfoid,jdbcType=BIGINT},
+      userType = #{usertype,jdbcType=TINYINT},
+      logintime = #{logintime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id, ip, state, username, logininfoid, userType, logintime
+    from iplog
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, ip, state, username, logininfoid, userType, logintime
+    from iplog
+  </select>
+</mapper>
