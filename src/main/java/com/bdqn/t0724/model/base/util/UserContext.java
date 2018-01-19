@@ -1,7 +1,9 @@
 package com.bdqn.t0724.model.base.util;
 
-import com.xmg.p2p.base.domain.Logininfo;
-import com.xmg.p2p.base.vo.VerifyCodeVO;
+
+
+import com.bdqn.t0724.model.base.domain.Logininfo;
+import com.bdqn.t0724.model.base.vo.VerifyCodeVO;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
