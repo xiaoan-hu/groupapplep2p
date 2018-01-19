@@ -1,5 +1,10 @@
 package com.bdqn.t0724.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public class UserBankInfo {
     private Long id;
 
@@ -12,52 +17,4 @@ public class UserBankInfo {
     private String forkname;
 
     private Long logininfoId;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getBankname() {
-        return bankname;
-    }
-
-    public void setBankname(String bankname) {
-        this.bankname = bankname == null ? null : bankname.trim();
-    }
-
-    public String getAccountname() {
-        return accountname;
-    }
-
-    public void setAccountname(String accountname) {
-        this.accountname = accountname == null ? null : accountname.trim();
-    }
-
-    public String getAccountnumber() {
-        return accountnumber;
-    }
-
-    public void setAccountnumber(String accountnumber) {
-        this.accountnumber = accountnumber == null ? null : accountnumber.trim();
-    }
-
-    public String getForkname() {
-        return forkname;
-    }
-
-    public void setForkname(String forkname) {
-        this.forkname = forkname == null ? null : forkname.trim();
-    }
-
-    public Long getLogininfoId() {
-        return logininfoId;
-    }
-
-    public void setLogininfoId(Long logininfoId) {
-        this.logininfoId = logininfoId;
-    }
 }
