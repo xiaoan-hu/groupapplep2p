@@ -1,0 +1,36 @@
+body{
+    position: relative;
+    margin: 0px;
+}
+section{
+    position: relative;
+    top: 130px;
+    left: 100px;
+    width: 1220px;
+    border: solid 1px black;
+}
+section>h2{
+    font-weight: normal;
+}
+#status-list{
+    position: relative;
+}
+#status-list>h4{
+    font-weight: normal;
+    color: rgba(0,0,0,0.38);
+    float: left;
+}
+.nav.nav-tabs{
+    position: relative;
+    left: 50px;
+    width: 300px;
+    border:solid 1px black;
+}
+#status-list>#status{
+    position: relative;
+    top: 30px;
+    width: 1200px;
+    border:solid 1px black;
+}
+
+

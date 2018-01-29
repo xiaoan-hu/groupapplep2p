@@ -1,0 +1,80 @@
+#top-black{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 40px;
+	background: black;
+	float: left;
+	font-size: 14px;
+}
+#top-page1{
+	position:absolute;
+	right: 250px;
+}
+#top-page2{
+	position:absolute;
+	right: 180px;
+}
+#top-page3{
+	position:absolute;
+	right: 110px;
+}
+.top-href{
+	position: relative;
+	top: 10px;
+	color: white;
+	float: left;
+	/*right: 200px;*/
+}
+.top-grey{
+	position: relative;
+	left: 0px;
+	top: 40px;
+	width: 100%;
+	height: 80px;
+	background:  rgba(0,0,0,0.04);
+}
+
+#logo{
+	position: absolute;
+	left: 110px;
+	top: 20px;
+	float: left;
+
+}
+#welcom{
+	position: absolute;
+	left: 250px;
+	top: 25px;
+	font: bold 20px "microsoft yahei";
+	color: rgba(11,123,155,0.81);
+}
+
+form>table{
+	position: relative;
+	left: 475px;
+	top: 100px;
+	width: 500px;
+	height: 200px;
+	font: 16px "microsoft yahei";
+}
+.grey{
+	color: darkgrey;
+	width: 200px;
+}
+.submit{
+	position: relative;
+	left: 30px;
+	width: 100px;
+	font: bold 16px "microsoft yahei";
+	color: white;
+	border: none;
+	line-height: 25px;
+	border-radius: 5px;
+	background: rgba(56,169,62,0.81);
+}
+table a{
+	position: relative;
+	left: -15px;
+}

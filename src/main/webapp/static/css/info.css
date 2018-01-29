@@ -1,0 +1,125 @@
+
+#box{
+    position: absolute;
+    left: 80px;
+    height: 605px;
+    width: 900px;
+    border-radius: 5px;
+    border: solid 1px gainsboro;
+    display: inline;
+    text-indent: 2em;
+}
+#photo{
+    position: relative;
+    left: 30px;
+    top: 30px;
+    width: 150px;
+    height: 150px;
+    border: solid 1px gainsboro;
+    display: inline-list-item;
+}
+#account-info{
+    position: absolute;
+    top: 20px;
+    left: 170px;
+    height: 150px;
+    width: 400px;
+}
+.button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background: none;
+    display: inline;
+    font-size: 16px;
+}
+#recharge{
+    position: relative;
+    left: 70px;
+    top: 25px;
+    background: rgba(33,19,167,0.81);
+}
+#reflect{
+    position: relative;
+    top: 25px;
+    left: 75px;
+    background: rgba(226,36,17,0.81);
+}
+hr{
+    height: 1px;
+    width: 850px;
+    border: none;
+    background: gainsboro;
+    z-index: 5;
+}
+#hr1{
+    position: relative;
+    left: 6px;
+    top: 50px;
+}
+#money-info{
+    position: relative;
+    top: 65px;
+    font-size: 18px;
+}
+p>span{
+    line-height: 30px;
+    padding: 55px;
+}
+#hr2{
+    position: relative;
+    left: 6px;
+    top: 80px;
+}
+#function{
+    font-size: 14px;
+}
+
+.pic1{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 55px;
+    height: 50px;
+}
+.bold{
+    position: absolute;
+    left: 70px;
+    top: 5px;
+    font-weight: bold;
+}
+.state{
+    position: absolute;
+    left: 70px;
+    top: 30px;
+}
+.function-box{
+    position: absolute;
+    left: 5px;
+    top: 380px;
+    width: 350px;
+    height: 95px;
+    display: inline-table;
+}
+#mobile{
+    position: absolute;
+    left:285px;
+
+}
+#email{
+    position: absolute;
+    left: 590px;
+
+}
+#level{
+    position: absolute;
+    top: 500px;
+}
+.last-text{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+

@@ -1,0 +1,55 @@
+#box1{
+    position: relative;
+    top: 10px;
+    left: 100px;
+    width: 290px;
+    float: left;
+    border: solid 1px black;
+}
+body{
+    border: 3px solid green;
+}
+.m{
+    float: left;
+}
+div.list-group{
+    position: relative;
+    /*left: 100px;*/
+    margin: 0px;
+    width: 250px;
+}
+div .list-group-item{
+    border-top: none;
+}
+div .list-group-item-text{
+    position: relative;
+    left: 20px;
+}
+div .list-group-item-text:visited{
+    color: white;
+    background: rgba(53,14,183,0.81);
+}
+div .list-group-item.active{
+    border: none;
+    background: gainsboro;
+}
+div .list-group-item.active:hover{
+    background: gainsboro;
+}
+h4{
+    color: #245269;
+    line-height: 10px;
+}
+
+#content{
+    float: left;
+    position: relative;
+    top: 5px;
+}
+
+section{
+    position: relative;
+    top: 130px;
+}
+
+
