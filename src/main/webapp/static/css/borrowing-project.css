@@ -1,0 +1,75 @@
+#title{
+    position: relative;
+    top: 10px;
+    left: 0px;
+}
+#title>h4{
+    margin-right: 10px;
+    float: left;
+}
+#title>input.form-control{
+    float: left;
+    width: 200px;
+    margin-right: 10px;
+}
+#status{
+    margin-right: 10px;
+    width: 100px;
+    float: left;
+}
+.button{
+    color: white;
+    height: 35px;
+    width: 60px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    background: rgba(33,181,3,0.55)
+}
+
+.container{
+    position: relative;
+    margin-left: 0px;
+    padding-left: 0px;
+    width: 1050px;
+    left: 0px;
+    margin-bottom: 0px;
+}
+
+div.container>h4{
+    width: 1020px;
+    padding-left: 10px;
+    margin-bottom: 0px;
+    line-height: 60px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: rgba(0,0,0,0.08);
+}
+
+.search{
+    position: absolute;
+    top: 20px;
+    right: 80px;
+    width: 80px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background: #d60907;
+    color: white;
+}
+div.container>table{
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+#page{
+    position: relative;
+    top: 0px;
+    margin-top: 0px;
+    left: 0px;
+    height: 80px;
+    border: 1px solid rgba(0,0,0,0.18);
+}
+.pagination{
+    position: relative;
+    left: 380px;
+}

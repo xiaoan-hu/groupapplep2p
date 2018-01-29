@@ -1,11 +1,9 @@
-
 #box{
     position: absolute;
     left: 80px;
     height: 605px;
     width: 900px;
     border-radius: 5px;
-    border: solid 1px gainsboro;
     display: inline;
     text-indent: 2em;
 }
@@ -15,7 +13,6 @@
     top: 30px;
     width: 150px;
     height: 150px;
-    border: solid 1px gainsboro;
     display: inline-list-item;
 }
 #account-info{

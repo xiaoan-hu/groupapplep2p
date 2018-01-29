@@ -1,3 +1,7 @@
+body{
+    position: relative;
+    margin: 0px;
+}
 #top1{
     position: absolute;
     left: 0px;
@@ -6,23 +10,20 @@
     height: 40px;
     background: black;
 }
-
-#top1 table{
+div#top1>table{
     position: relative;
     right: 80px;
     line-height: 35px;
     float: right;
     width: 350px;
+    color: white;
     font-size: 14px;
 }
-#top1 table a:link{
+div#top1>table>tbody>tr>td>a{
     color: white;
     text-decoration: none;
 }
-#top1 table a:hover{
-    color: rgba(8,45,252,0.81);
-    text-decoration: solid  rgba(8,45,252,0.81);
-}
+
 #top2{
     position: absolute;
     left: 0px;
@@ -31,23 +32,29 @@
     width: 100%;
     background: rgba(0,0,0,0.06);
 }
-#top2 table{
-    position: absolute;
-    top: 0px;
+#top2>table{
+    position: relative;
     left: 100px;
     width: 800px;
     height: 80px;
     font-size: 18px;
 }
-#top2 table #logo{
+#top2>table>tbody>tr>#logo{
+    position: relative;
+    top: 3px;
     width: 130px;
 }
-#top2 h4{
+#top2>table>tbody>tr>td>h4{
+    position: absolute;
+    top: 30px;
     font-weight: normal;
+
+
 }
-#top2 a:link{
+#top2>table>tbody>tr>td>h4>a:link{
     color: rgba(0,0,0,0.44);
     text-decoration: none;
+
 }
 
 #web-content{

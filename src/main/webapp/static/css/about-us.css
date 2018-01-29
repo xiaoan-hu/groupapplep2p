@@ -1,0 +1,80 @@
+body{
+    position: relative;
+    margin: 0px;
+}
+header{
+    position: relative;
+    height: 110px;
+}
+header>div#top2>table>tbody{
+    position: relative;
+    top: -2px;
+}
+header>div#top2>table>tbody>tr>td>h4>a{
+    position: relative;
+    left: 7px;
+    color: black;
+}
+#about-us{
+    background: rgba(0,0,0,0.16);
+    height: 80px;
+}
+section{
+    position: relative;
+    top: 40px;
+    height: 250px;
+
+}
+section>h3{
+    position: relative;
+    left: 180px;
+    width: 1000px;
+    padding-bottom: 15px;
+    border-bottom: solid 2px #2aabd2;
+    margin-bottom: 5px;
+    color: #2aabd2;
+}
+section>p{
+    position: relative;
+    left: 180px;
+    text-indent: 2em;
+    line-height: 35px;
+    width: 1000px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+#company-info{
+    position: relative;
+    top: 40px;
+    left: 180px;
+    width: 1000px;
+    height: 500px;
+
+}
+.info-box{
+    width: 400px;
+    height: 200px;
+}
+.info-box>h1{
+    margin-left: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #2aabd2;
+    font: 30px bold;
+}
+.grey{
+    color: grey;
+}
+#business-cooperation{
+    position: absolute;
+    top: 0px;
+    left: 500px;
+}
+#custom-service{
+    margin-top: 30px;
+}
+#public-relations-department{
+    position: absolute;
+    top: 230px;
+    margin-left: 500px;
+}

@@ -2,18 +2,35 @@ body{
     position: relative;
     margin: 0px;
 }
+header{
+    position: relative;
+    height: 120px;
+}
+
+header>div#top2>table>tbody>tr>td>h4>a{
+    position: relative;
+    top: -5px;
+    color: black;
+    margin-left: 10px;
+}
+#invest{
+    background: rgba(0,0,0,0.16);
+}
 section{
     position: relative;
-    top: 130px;
-    left: 100px;
-    width: 1220px;
-    border: solid 1px black;
+    width: 100%;
+    float: top;
 }
 section>h2{
+    position: relative;
+    left: 100px;
+    top: 20px;
     font-weight: normal;
 }
 #status-list{
     position: relative;
+    left: 100px;
+    top: 30px;
 }
 #status-list>h4{
     font-weight: normal;
@@ -24,13 +41,12 @@ section>h2{
     position: relative;
     left: 50px;
     width: 300px;
-    border:solid 1px black;
+    border: none;
 }
 #status-list>#status{
     position: relative;
     top: 30px;
     width: 1200px;
-    border:solid 1px black;
 }
 
 
