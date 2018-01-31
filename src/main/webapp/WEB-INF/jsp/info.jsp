@@ -40,14 +40,14 @@
     <div id="function">
 
         <div class="function-box">
-            <div class="pic1"><img src="static/images/shiming.png"></div>
+            <div class="pic1"><img src="../../static/images/shiming.png"></div>
             <span class="bold">实名认证</span>
             <span class="state">${状态} <a href="#">查看</a></span>
             <span class="last-text">实名认证之后才能在平台投资</span>
         </div>
 
         <div id="mobile" class="function-box">
-            <div class="pic1"><img src="static/images/shouji.jpg"></div>
+            <div class="pic1"><img src="../../static/images/shouji.jpg"></div>
             <span class="bold">手机认证</span>
             <span class="state">${状态} <a href="#">查看</a></span>
             <span class="last-text">可以收到系统操作信息，并增加使用安全性</span>
@@ -55,7 +55,7 @@
 
 
         <div id="email" class="function-box">
-            <div class="pic1"><img src="static/images/youxiang.jpg" style="margin: 0px"></div>
+            <div class="pic1"><img src="../../static/images/youxiang.jpg" style="margin: 0px"></div>
             <span class="bold">邮箱认证</span>
             <span class="state">${状态} <a href="#">查看</a></span>
             <span class="last-text">您可以设置邮箱来接受重要信息</span>
@@ -63,7 +63,7 @@
 
 
         <div id="level" class="function-box">
-            <div class="pic1"><img src="static/images/baozhan.jpg"></div>
+            <div class="pic1"><img src="../../static/images/baozhan.jpg"></div>
             <span class="bold">VIP会员</span>
             <span class="state">${等级} <a href="#">查看</a></span>
             <span class="last-text">VIP会员，让你更快捷的投资</span>
@@ -71,8 +71,8 @@
 
     </div>
     </div>
-    <script type="text/javascript" src="static/js/jquery-1.12.4.js"/>
-    <script type="text/javascript" src="static/js/bootstrap.js"/>
+    <script type="text/javascript" src="../../static/js/jquery-1.12.4.js"/>
+    <script type="text/javascript" src="../../static/js/bootstrap.js"/>
 
 
 </body>

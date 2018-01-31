@@ -94,9 +94,9 @@
 <%@include file="footer.jsp"%>
 
 
-<script type="text/javascript" src="static/js/jquery-1.12.4.js"/>
-<script type="text/javascript" src="static/js/bootstrap.js"/>
-<script  type="text/javascript" src="static/js/vue.js"/>
+<script type="text/javascript" src="../../static/js/jquery-1.12.4.js"/>
+<script type="text/javascript" src="../../static/js/bootstrap.js"/>
+<script  type="text/javascript" src="../../static/js/vue.js"/>
 
 <script type="text/javascript">
 

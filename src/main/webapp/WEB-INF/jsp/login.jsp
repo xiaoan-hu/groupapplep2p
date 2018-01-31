@@ -20,7 +20,7 @@
 	</header>
 
 	<section>
-		<form action="#">
+		<form action="/login.html" method="post">
 			<table>
 				<tr>
 					<td></td>
@@ -28,11 +28,11 @@
 				</tr>
 				<tr>
 					<td>用户名</td>
-					<td><input class="form-control" type="text"></td>
+					<td><input class="form-control" type="text" name="username"></td>
 				</tr>
 				<tr>
 					<td>密码</td>
-					<td><input class="form-control" type="password"></td>
+					<td><input class="form-control" type="password" name="password"></td>
 					
 				</tr>
 				<tr>
@@ -47,6 +47,6 @@
 <%@include file="footer.jsp"%>
 
 	</body>
-	<script type="text/javascript" src="static/js/jquery-1.12.4.js"></script>
-	<script type="text/javascript" src="static/js/bootstrap.js"></script>
+	<script type="text/javascript" src="../../static/js/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="../../static/js/bootstrap.js"></script>
 </html>

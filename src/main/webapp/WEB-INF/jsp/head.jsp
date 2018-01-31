@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>首页</title>
-    <link type="text/css" rel="stylesheet" href="static/css/head.css">
+    <link type="text/css" rel="stylesheet" href="../../static/css/head.css">
 </head>
 <body>
 
@@ -40,7 +40,7 @@
     <table>
         <tbody>
         <tr>
-            <td id="logo"><img src="static/images/logo.png"></td>
+            <td id="logo"><img src="../../static/images/logo.png"></td>
             <td id="home-page" style="width: 70px"><h4><a href="home-page.jsp"> 首页 &nbsp;&nbsp;</a></h4></td>
             <td id="invest"><h4><a href="invest.jsp">&nbsp;&nbsp; 我要投资 &nbsp;&nbsp;</a></h4></td>
             <td id="loan"><h4><a href="loan.jsp">&nbsp;&nbsp; 我要借款 &nbsp;&nbsp;</a></h4></td>

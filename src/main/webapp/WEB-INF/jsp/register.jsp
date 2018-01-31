@@ -61,7 +61,7 @@
     </div>
     </div>
 </form>
-<script type="text/javascript" src="static/js/jquery-1.12.4.js"></script>
-<script type="text/javascript" src="static/js/bootstrap.js"></script>
+<script type="text/javascript" src="../../static/js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="../../static/js/bootstrap.js"></script>
 </body>
 </html>
