@@ -34,8 +34,8 @@ div#top1>table>tbody>tr>td>a{
 }
 #top2>table{
     position: relative;
-    left: 100px;
-    width: 800px;
+    left: 20%;
+    width: 900px;
     height: 80px;
     font-size: 18px;
 }
@@ -43,6 +43,9 @@ div#top1>table>tbody>tr>td>a{
     position: relative;
     top: 3px;
     width: 130px;
+}
+#logoImg{
+    width: 100px;
 }
 #top2>table>tbody>tr>td>h4{
     position: absolute;

@@ -1,11 +1,12 @@
 #box{
+    margin-top: -8px;
     position: absolute;
-    left: 80px;
-    height: 605px;
-    width: 900px;
+    height: 100%;
+    width: 75%;
     border-radius: 5px;
     display: inline;
     text-indent: 2em;
+    border: solid 1px gainsboro;
 }
 #photo{
     position: relative;
@@ -46,7 +47,7 @@
 }
 hr{
     height: 1px;
-    width: 850px;
+    width: 95%;
     border: none;
     background: gainsboro;
     z-index: 5;

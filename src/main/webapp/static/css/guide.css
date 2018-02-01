@@ -16,7 +16,7 @@ section{
     position: relative;
     top: 140px;
     left: 140px;
-    width: 1000px;
+    width: 70%;
 }
 
 section>ul.nav.nav-tabs{
@@ -27,6 +27,7 @@ section>ul.nav.nav-tabs>li>a{
     text-align: center;
     color: black;
     width: 160px;
+    margin-left: 5%;
 }
 h4.panel-title{
     padding: unset;

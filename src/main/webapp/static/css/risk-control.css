@@ -1,0 +1,40 @@
+#box{
+    border: solid 1px gainsboro;
+    width: 900px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+#box-top{
+    position: relative;
+    top: -14px;
+    height: 40px;
+    background: gainsboro;
+}
+#box-top>p{
+    position: relative;
+    left: -380px;
+    line-height: 40px;
+}
+#box-button{
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    background: #2563b4;
+    color: white;
+    margin-bottom: 5px;
+}
+.msg{
+    position: relative;
+    top: -34px;
+    line-height: 80px;
+    background: rgba(11,255,253,0.02);
+    border-left: #2aabd2 2px solid;
+}
+div.msg>p{
+    position: relative;
+    left: -285px;
+    margin-top: 20px;
+}

@@ -6,12 +6,7 @@ header{
     position: relative;
     height: 110px;
 }
-/*header>div#top2>table>tbody>tr>td{*/
-    /*border: skyblue solid 2px;*/
-    /*width: 100px;*/
-   /**/
 
-/*}*/
 header>div#top2>table>tbody>tr>td>h4>a{
     position: relative;
     top: -5px;
@@ -28,24 +23,31 @@ section{
     top: 40px;
     width: 100%;
     float: top;
+    text-align: center;
 }
 #picture{
     position: relative;
-    width: 100%;
-    height: 280px;
-    float: top;
+    text-align: center;
+}
+.carousel{
+    width: 1340px;
+    margin: auto;
 }
 #action{
-    position: relative;
-    top: 30px;
-    float: top;
+    text-align: center;
+}
+img{
+    width: 100%;
+}
+.item{
+    width: 100%;
 }
 .action-div{
     position: relative;
-    left:100px;
     width: 370px;
-    float: left;
-    margin-left: 10px;
+    display: inline-block;
+    margin-right: 4%;
+    text-align: left;
 }
 .action-img{
     position: relative;
@@ -69,10 +71,10 @@ div>p{
 }
 
 #borrow-ing{
-    float: top;
     position: relative;
     top: 140px;
-    width: 1150px;
+    width: 70%;
+    left: -2%;
 }
 
 div>h2{
@@ -103,9 +105,9 @@ div#borrow-ing>table.table.table-striped>tbody>tr>td>button{
 }
 
 #news{
-    float: top;
     position: relative;
     top: 220px;
+    width: 75%;
 }
 #news>ul{
     position: relative;

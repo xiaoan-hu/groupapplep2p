@@ -22,7 +22,9 @@ header>div#top2>table>tbody>tr>td>h4>a{
 section{
     position: relative;
     top: 40px;
-    height: 250px;
+    height: 60%;
+    left: 5%;
+    width: 75%;
 
 }
 section>h3{

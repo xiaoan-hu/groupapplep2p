@@ -8,8 +8,8 @@
 <body>
     <form id="title">
         <h4>时间范围</h4>
-        <input type="date" placeholder=" " class="form-control">
-        <input type="date" placeholder=" " class="form-control">
+        <input type="date" class="form-control">
+        <input type="date" class="form-control">
         <h4>状态</h4>
 
         <select  class="form-control" id="status">

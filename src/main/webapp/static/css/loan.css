@@ -34,6 +34,7 @@ section{
     height: 390px;
     background: rgba(0,0,0,0.02);
     display: inline-table;
+    margin-left: 3%;
 }
 .box>.tap>p{
     position: relative;

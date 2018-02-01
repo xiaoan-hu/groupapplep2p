@@ -19,18 +19,19 @@ header>div#top2>table>tbody>tr>td>h4>a{
 section{
     position: relative;
     width: 100%;
-    float: top;
 }
 section>h2{
     position: relative;
     left: 100px;
     top: 20px;
     font-weight: normal;
+    width: 75%;
 }
 #status-list{
     position: relative;
     left: 100px;
     top: 30px;
+    width: 75%;
 }
 #status-list>h4{
     font-weight: normal;

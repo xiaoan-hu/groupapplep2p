@@ -1,0 +1,78 @@
+#box{
+    border: solid 1px gainsboro;
+    width: 65%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+#box-top{
+    position: relative;
+    height: 40px;
+    background: gainsboro;
+}
+#box-top>p{
+    position: relative;
+    left: -45%;
+    line-height: 40px;
+}
+#box>table{
+    position: relative;
+    left: 30%;
+    line-height: 60px;
+    text-align: right;
+}
+#box>table>tbody>tr>td>span{
+    font-size: 14px;
+    font-weight: bold;
+}
+#box>table>tbody>tr>td>select{
+    margin-left: 30px;
+    width: 270px;
+}
+#box>table>tbody>tr>td>p{
+    position: relative;
+    left: 30px;
+    text-align: left;
+    margin-bottom: -15px;
+    font-size: 14px;
+    color: #3187d2;
+}
+#box>table>tbody>tr>td>a{
+    position: relative;
+    top: 40px;
+    margin-left: 40px;
+    font-size: 14px;
+}
+input.form-control{
+    margin-left: 30px;
+    width: 270px;
+}
+#box>table>tbody>tr>td>button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    left: -327px;
+    font-size: 14px;
+    height: 30px;
+    width: 100px;
+    line-height: 30px;
+    border-radius: 5px;
+    background: #2563b4;
+    color: white;
+}
+#idCard{
+    position: relative;
+    top: -50px;
+}
+.photo-box{
+    float: left;
+    margin-left: 30px;
+    border: gainsboro 1px solid;
+    width: 150px;
+    height: 150px;
+}
+button#keep{
+    margin-right: -63%;
+}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     t

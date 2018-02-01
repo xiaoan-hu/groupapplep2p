@@ -50,13 +50,13 @@
         <a href="info.jsp" id="select" class="list-group-item" target="content">
             <div class="list-group-item-text">账户信息</div>
         </a>
-        <a href="#" class="list-group-item">
+        <a href="name-authentication.jsp" class="list-group-item" target="content">
             <div class="list-group-item-text">实名认证</div>
         </a>
-        <a href="#" class="list-group-item">
+        <a href="risk-control.jsp" class="list-group-item" target="content">
             <div class="list-group-item-text">风控资料认证</div>
         </a>
-        <a href="#" class="list-group-item">
+        <a href="building-bank-card.jsp" class="list-group-item" target="content">
             <div class="list-group-item-text">银行卡管理</div>
         </a>
         <a href="login-record.jsp" class="list-group-item" target="content">

@@ -1,0 +1,53 @@
+Index: src/main/webapp/WEB-INF/jsp/login.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/webapp/WEB-INF/jsp/login.jsp	(date 1517228663000)
++++ src/main/webapp/WEB-INF/jsp/login.jsp	(date 1517299010400)
+@@ -9,8 +9,8 @@
+ 	<body>
+ 	<header >
+ 		<div id="top-black">
+-			<div id="top-page1"><a class="top-href" href="home-page.jsp">首页</a></div>
+-			<div id="top-page2"><a class="top-href" href="">登录</a></div>
++			<div id="top-page1"><a class="top-href" href="/home-page.jsp">首页</a></div>
++			<div id="top-page2"><a class="top-href" href="/login">登录</a></div>
+ 			<div id="top-page3"><a class="top-href" href="">帮助</a></div>
+ 		</div>
+ 		<div class="top-grey">
+@@ -38,15 +38,15 @@
+ 				<tr>
+ 					<td></td>
+ 					<td><input  class="submit" type="submit" value="登录"></td>
+-					<td><a href="register.jsp">新用户，马上注册</a></td>
++					<td><a href="/register.jsp">新用户，马上注册</a></td>
+ 				</tr>
+ 			</table>
+ 			
+ 		</form>
+ 	</section>
+-<%@include file="footer.jsp"%>
++<%@include file="/footer.jsp"%>
+ 
+ 	</body>
+-	<script type="text/javascript" src="static/js/jquery-1.12.4.js"></script>
+-	<script type="text/javascript" src="static/js/bootstrap.js"></script>
++	<script type="text/javascript" src="/static/js/jquery-1.12.4.js"></script>
++	<script type="text/javascript" src="/static/js/bootstrap.js"></script>
+ </html>
+Index: src/main/webapp/WEB-INF/web.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/webapp/WEB-INF/web.xml	(date 1517228663000)
++++ src/main/webapp/WEB-INF/web.xml	(date 1517228910584)
+@@ -3,7 +3,6 @@
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+          version="3.1">
+-
+     <context-param>
+         <param-name>contextClass</param-name>
+         <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>

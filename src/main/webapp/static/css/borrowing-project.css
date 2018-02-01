@@ -31,13 +31,13 @@
     position: relative;
     margin-left: 0px;
     padding-left: 0px;
-    width: 1050px;
+    width: 75%;
     left: 0px;
     margin-bottom: 0px;
 }
 
 div.container>h4{
-    width: 1020px;
+    width: 100%;
     padding-left: 10px;
     margin-bottom: 0px;
     line-height: 60px;
