@@ -14,7 +14,9 @@
 			<div id="top-page3"><a class="top-href" href="">帮助</a></div>
 		</div>
 		<div class="top-grey">
-			<div><img id="logo" src="/static/images/logo.png"></div>
+			<div id="logo-box">
+				<img id="logo" src="/static/images/logo.png">
+			</div>
 			<div id="welcom">用户登录</div>
 		</div>
 	</header>
@@ -44,7 +46,7 @@
 			
 		</form>
 	</section>
-<%@include file="footer.jsp"%>
+<%@include file="/WEB-INF/jsp/footer.jsp"%>
 
 	</body>
 	<script type="text/javascript" src="static/js/jquery-1.12.4.js"></script>
