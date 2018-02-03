@@ -12,7 +12,7 @@ public class HomeController {
     @RequestMapping("/")
     public String index(HttpServletRequest request,Model model) {
 
-        model.addAttribute("cardNo",request.getUserPrincipal().getName());
+        model.addAttribute("account",request.getUserPrincipal().getName());
 
         return "home-page";
     }

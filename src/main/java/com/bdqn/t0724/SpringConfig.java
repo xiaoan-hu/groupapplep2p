@@ -13,55 +13,39 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.sql.DataSource;
 
 @Configuration
-@ComponentScan(basePackages = {"com.bdqn.t0724.service"})
-@PropertySource("classpath:/db.properties")
+@ComponentScan(basePackages = {"com.bdqn.t0724"})
+//@PropertySource("classpath:/db.properties")
 @Import(ShiroConfig.class)
 @EnableTransactionManagement
 public class SpringConfig {
-    @Value("${p2p.className}")
-    private String className;
-    @Value("${p2p.url}")
-    private String url;
-    @Value("${p2p.username}")
-    private String username;
-    @Value("${p2p.password}")
-    private String password;
 
-//    @Profile("development")
-//    @Bean
-//    public DataSource dataSource() {
-//        BasicDataSource dataSource = new BasicDataSource();
-//        // 设置jdbc driver的主类
-//        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-//        dataSource.setUrl("jdbc:mysql:///t0724");
-//        dataSource.setUsername("root");
-//        dataSource.setPassword("123456");
-//        return dataSource;
-//    }
 
-//    @Profile("development")
+
+
+    @Profile("development")
     @Bean
-    public DataSource druidDataSource(){
-        DruidDataSource druidDataSource = new DruidDataSource();
-        druidDataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        druidDataSource.setUrl("jdbc:mysql:///t0724");
-        druidDataSource.setUsername("root");
-        druidDataSource.setPassword("123456");
-        return druidDataSource;
+    public DataSource dataSource() {
+        DruidDataSource dataSource = new DruidDataSource();
+        // 设置jdbc driver的主类
+        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+        dataSource.setUrl("jdbc:mysql:///p2p_loan");
+        dataSource.setUsername("root");
+        dataSource.setPassword("123456");
+        return dataSource;
     }
 
     @Bean
     public SqlSessionFactory sqlSessionFactory(ApplicationContext context) throws Exception {
         SqlSessionFactoryBean ssfBean = new SqlSessionFactoryBean();
-        ssfBean.setDataSource(druidDataSource());
-        ssfBean.setMapperLocations(context.getResources("classpath*:*-mapper.xml"));
+        ssfBean.setDataSource(dataSource());
+        ssfBean.setMapperLocations(context.getResources("classpath:/com/bdqn/t0724/*Mapper.xml"));
         return ssfBean.getObject();
     }
 
     @Bean
     public DataSourceTransactionManager dataSourceTransactionManager(){
         DataSourceTransactionManager manager = new DataSourceTransactionManager();
-        manager.setDataSource(druidDataSource());
+        manager.setDataSource(dataSource());
         return manager;
     }
 

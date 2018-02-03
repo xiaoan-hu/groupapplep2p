@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class LoginController {
 
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    @RequestMapping(value = "/login.html", method = RequestMethod.GET)
     public String loginForm() {
         return "login";
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/login.html", method = RequestMethod.POST)
     public String afterLogin() {
         return "redirect: /";
     }

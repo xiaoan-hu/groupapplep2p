@@ -1,5 +1,6 @@
 package com.bdqn.t0724;
 
+import org.apache.shiro.authc.credential.SimpleCredentialsMatcher;
 import org.apache.shiro.mgt.SecurityManager;
 import org.apache.shiro.realm.Realm;
 import org.apache.shiro.realm.jdbc.JdbcRealm;
@@ -19,9 +20,13 @@ public class ShiroConfig {
     @Bean
     public Realm realm(DataSource dataSource){
         JdbcRealm jdbcRealm = new JdbcRealm();
+
         jdbcRealm.setDataSource(dataSource);
-        jdbcRealm.setAuthenticationQuery("select password password from logininfo where id = ?");
-        jdbcRealm.setPermissionsQuery("select `userType` userType from logininfo where id = ?");
+        jdbcRealm.setAuthenticationQuery("select password password from logininfo where username = ?");
+        //告诉realm如何根据用户名提取用户的角色信息
+        //目前，系统中没有指定用户的角色列或者表，所以写死为`user`角色
+        jdbcRealm.setUserRolesQuery("select `user` role_name from user where id = ?");
+//        jdbcRealm.setPermissionsQuery("select `userType` userType from logininfo where id = ?");
         return  jdbcRealm;
     }
 
